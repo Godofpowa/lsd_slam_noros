@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(slam_app)
 
-set(LIB_CXSPARSE  /usr/lib/x86_64-linux-gnu/libcxsparse.so)
+##set(LIB_CXSPARSE  /usr/lib/x86_64-linux-gnu/libcxsparse.so)
 
-SET(LIBS_LINK GL GLU cholmod /usr/lib/x86_64-linux-gnu/libcxsparse.so /usr/lib/libcxsparse.so ${G2O_LIBRARIES} ${QT_LIBRARIES} ${QT_QTOPENGL_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARY} ${OpenCV_LIBS})
+##SET(LIBS_LINK GL GLU cholmod /usr/lib/x86_64-linux-gnu/libcxsparse.so /usr/lib/libcxsparse.so ${G2O_LIBRARIES} ${QT_LIBRARIES} ${QT_QTOPENGL_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARY} ${OpenCV_LIBS})
 
 
 set(G2O_LIBS
@@ -52,11 +52,11 @@ set(G2O_LIBS
 message("LsdSlam_ALL_LIBRARIES=${LsdSlam_ALL_LIBRARIES}")
 add_executable(main_on_images main_on_images.cc)
 set_property(TARGET main_on_images PROPERTY FOLDER "lsd_slam/apps")
-target_link_libraries(main_on_images ${LsdSlam_ALL_LIBRARIES} ${LIB_CXSPARSE} ${OpenCV_LIBRARIES} ${LIBS_LINK})
+target_link_libraries(main_on_images ${LsdSlam_ALL_LIBRARIES} ${OpenCV_LIBRARIES} ${LIBS_LINK})
 
 ## only this works at the moment
 add_executable(sample_app sample_app.cc DebugOutput3DWrapper.cpp DebugOutput3DWrapper.h)
 set_property(TARGET sample_app PROPERTY FOLDER "lsd_slam/apps")
-target_link_libraries(sample_app ${LsdSlam_ALL_LIBRARIES} ${G2O_LIBS} ${LIB_CXSPARSE})
+target_link_libraries(sample_app ${LsdSlam_ALL_LIBRARIES} ${G2O_LIBS})
 
 lsd_slam_print_status("LsdSlam_ALL_LIBRARIES:${LsdSlam_ALL_LIBRARIES}")
