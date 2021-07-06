@@ -23,7 +23,6 @@
 #include "depth_estimation/depth_map_pixel_hypothesis.h"
 #include "tracking/tracking_reference.h"
 
-typedef float32x4_t __m128;
 
 namespace lsd_slam
 {
