@@ -22,7 +22,7 @@
 
 #include "util/eigen_core_include.h"
 #include <opencv2/core/core.hpp>
-
+#include "../sse2neon.h"
 
 
 namespace lsd_slam
