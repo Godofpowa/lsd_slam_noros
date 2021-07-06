@@ -31,6 +31,8 @@ set(EXECUTABLE_OUTPUT_PATH ${LSD_SLAM_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${LSD_SLAM_DIR}/lib)
 set(CMAKE_MODULE_PATH   ${LSD_SLAM_DIR}/cmake ${CMAKE_MODULE_PATH})
 
+SET(LIBS_LINK GL GLU cholmod /usr/lib/x86_64-linux-gnu/libcxsparse.so.3.1.2 /usr/lib/libcxsparse.so.2.2.3 ${G2O_LIBRARIES} ${QT_LIBRARIES} ${QT_QTOPENGL_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARY} ${OpenCV_LIBS})
+
 # output paths settings ========================================================
 # postfix, based on type
 set(CMAKE_DEBUG_POSTFIX "_d" CACHE STRING "postfix applied to debug build of libraries")
