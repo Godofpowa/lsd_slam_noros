@@ -27,6 +27,7 @@
 #include "model/frame_memory.h"
 #include "unordered_set"
 #include "util/settings.h"
+#include "sse2neon.h"
 
 
 namespace lsd_slam
