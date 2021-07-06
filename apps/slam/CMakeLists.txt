@@ -52,11 +52,11 @@ set(G2O_LIBS
 message("LsdSlam_ALL_LIBRARIES=${LsdSlam_ALL_LIBRARIES}")
 add_executable(main_on_images main_on_images.cc)
 set_property(TARGET main_on_images PROPERTY FOLDER "lsd_slam/apps")
-target_link_libraries(main_on_images ${LsdSlam_ALL_LIBRARIES} ${OpenCV_LIBRARIES} ${LIBS_LINK})
+target_link_libraries(main_on_images ${LsdSlam_ALL_LIBRARIES} ${OpenCV_LIBRARIES} ${LIB_CXSPARSE})
 
 ## only this works at the moment
 add_executable(sample_app sample_app.cc DebugOutput3DWrapper.cpp DebugOutput3DWrapper.h)
 set_property(TARGET sample_app PROPERTY FOLDER "lsd_slam/apps")
-target_link_libraries(sample_app ${LsdSlam_ALL_LIBRARIES} ${G2O_LIBS})
+target_link_libraries(sample_app ${LsdSlam_ALL_LIBRARIES} ${G2O_LIBS} ${LIB_CXSPARSE})
 
 lsd_slam_print_status("LsdSlam_ALL_LIBRARIES:${LsdSlam_ALL_LIBRARIES}")
