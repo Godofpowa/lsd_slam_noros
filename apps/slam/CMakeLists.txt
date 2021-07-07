@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(slam_app)
 
-set(LIB_CXSPARSE  /usr/lib/x86_64-linux-gnu/libcxsparse.so.3.1.2)
+set(LIB_CXSPARSE  /usr/lib/aarch64-linux-gnu/libcxsparse.so)
 
 ##SET(LIBS_LINK GL GLU cholmod /usr/lib/x86_64-linux-gnu/libcxsparse.so /usr/lib/libcxsparse.so ${G2O_LIBRARIES} ${QT_LIBRARIES} ${QT_QTOPENGL_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARY} ${OpenCV_LIBS})
 
